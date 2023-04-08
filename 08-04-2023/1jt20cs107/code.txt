@@ -1,0 +1,24 @@
+class ListNode:
+    def _init_(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
+    carry = 0
+    dummy_head = ListNode()
+    curr = dummy_head
+    
+    while l1 or l2 or carry:
+        sum = carry
+        if l1:
+            sum += l1.val
+            l1 = l1.next
+        if l2:
+            sum += l2.val
+            l2 = l2.next
+            
+        carry = sum // 10
+        curr.next = ListNode(sum % 10)
+        curr = curr.next
+        
+    return dummy_head.next
