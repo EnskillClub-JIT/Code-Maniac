@@ -1,0 +1,12 @@
+import re 
+
+string = "aa"
+
+pattern = re.compile("a*")
+
+match = pattern.match(string)
+
+if match:
+    print("true")
+else:
+    print("false")
