@@ -46,4 +46,4 @@ def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
 
     
 
-    return dummy_head.next
+    return dummy_head.ne
